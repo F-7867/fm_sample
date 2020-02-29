@@ -1,0 +1,32 @@
+%header
+    .content
+        .top-content
+            .top-content__logo
+                = link_to root_path do
+                    = image_tag("fmarket_logo_red.svg", class:"top-content__logo")
+            = form_with class: 'top-content__search', url: "#", local: true do |f|
+                = f.text_field :keyword, placeholder:'何かお探しですか？', class: 'top-content__search__keyword', id: 'top-content__search__keyword'
+                %label.top-content__search__icon
+                    = icon('fas', 'search')
+                    = f.submit :submit, style: "display: none;"
+        .bottom-content
+            .bottom-content__item
+                .bottom-content__item__category
+                    .header-category__link
+                        = link_to "#" ,class: "bottom-content__item__category__part" do
+                            = icon('fas', 'list', class: 'bottom-content__item__category__part__icon')
+                            カテゴリーから探す
+                    .header-category__box
+                        .header-category__box__first
+                        .header-category__box__second
+                        .header-category__box__third
+
+                .bottom-content__item__brand
+                    = link_to "#", class: "bottom-content__item__brand__part" do
+                        = icon('fas', 'tag', class: 'bottom-content__item__brand__part__icon')
+                        ブランドから探す
+            %ul.bottom-content__list
+                %li.bottom-content__list__new-registration
+                    = link_to "新規登録" , "#", class: 'btn'
+                %li.bottom-content__list__login
+                    = link_to "ログイン", "#", class: 'btn'

@@ -1,0 +1,182 @@
+header {
+    background-color: #fff;
+}
+
+.categoryselect {
+    color : aqua;
+}
+
+.tagselect1 {
+    background-color:rgb(234, 53, 45);
+    color : white;
+}
+
+.tagselect2 {
+    background-color:rgb(204, 204, 204);
+}
+
+.content {
+    width: 1020px;
+    margin: 0px auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.top-content {
+    display: flex;
+    padding: 8px 0px 0px;
+    &__logo {
+        height: 36px;
+        width: 134px;
+        margin-right: 45px;
+    }
+    &__search {
+        width: 100%;
+        position: relative;
+        &__keyword{
+            background-color: rgb(245, 245, 245);
+            font-size: 16px;
+            height: 40px;
+            line-height: 1.4em;
+            position: relative;
+            width: 100%;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(204, 204, 204);
+            border-radius: 4px;
+            outline: none;
+            padding: 0px 50px 0px 10px;
+        }
+        &__icon {
+            cursor: pointer;
+            height: 40px;
+            position: absolute;
+            right: 0px;
+            top: 8px;
+            width: 40px;
+        }
+    }
+}
+
+.bottom-content {
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+    &__item {
+        display: flex;
+        margin-left: -3px;
+        &__category {
+            cursor: pointer;
+            height: 44px;
+            position: relative;
+            z-index: 3;
+            padding: 0px 10px;
+            padding-left: 0px;
+            &__part {
+                @include aTagSet1;
+                &__icon {
+                    @include iconSet(rgb(234, 53, 45), 10px)
+                }
+            }
+        }
+        &__brand {
+            cursor: pointer;
+            height: 44px;
+            position: relative;
+            z-index: 3;
+            padding: 0px 10px;
+            &__part {
+                @include aTagSet1;
+                &__icon {
+                    @include iconSet(rgb(234, 53, 45), 10px)
+                }
+            }
+    
+        }
+    }
+    &__list {
+        display: flex;
+        position: relative;
+        &__favorite {
+            padding: 0px 14px;
+            cursor: pointer;
+            &__part {
+                @include aTagSet2;
+                &__icon {
+                    @include iconSet;
+                    width: 19px;
+                }
+            }
+        }
+        &__notice {
+            padding: 0px 14px;
+            cursor: pointer;
+            &__part {
+                @include aTagSet2;
+                &__icon {
+                    @include iconSet;
+                    width: 19px;
+                }
+            }
+        }
+        &__todo {
+            padding: 0px 14px;
+            cursor: pointer;
+            &__part {
+                @include aTagSet2;
+                &__icon {
+                    @include iconSet;
+                    width: 19px;
+                }
+            }
+        }
+        &__mypage {
+            padding: 0px 14px;
+            cursor: pointer;
+            &__part {
+                @include aTagSet2;
+                &__icon {
+                    @include iconSet;
+                    width: 19px;
+                }
+                &__img {
+                    margin-right: 10px;
+                    width: 32px;
+                    border-radius: 50%;
+                    overflow: hidden;;
+                }
+            }
+        }
+        &__new-registration {
+            .btn {
+                font-size: 14px;
+                line-height: 32px;
+                border-radius: 5px;
+                padding: 8px 10px;
+                margin: 10px 0;
+                border: 1px solid #ea352d;
+                background: #ea352d;
+                color: #fff;
+            }
+        }
+        &__login {
+            margin-left: 11px;
+            .btn {
+                font-size: 14px;
+                line-height: 32px;
+                border-radius: 5px;
+                padding: 8px 10px;
+                margin: 10px 0;
+                border: 1px solid #0099e8;
+                color: #0099e8;
+                transition-duration: 0.3s;
+                &:hover {
+                    background: #0099e8;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

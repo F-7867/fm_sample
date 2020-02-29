@@ -1,0 +1,32 @@
+.wrapper
+    = render "shared/header"
+    = render 'exhibit-btn'
+    .toppage-main
+        .toppage-main__image
+            %ul.slider
+                %li.slider__first
+                    = image_tag("clothes.jpg", width: '1440px', height: '450px')
+                %li.slider__second
+                    = image_tag("book.jpg", width: '1440px',height: '450px')
+            .slick
+                .slick-next
+                    = icon('fas', 'chevron-right')
+                .slick-prev
+                    = icon('fas', 'chevron-left')
+        .toppage-main__category
+            %h2
+                人気のカテゴリー
+        .toppage-main__category__menu
+            %ul
+                %li.toppage-main__category__menu__list
+                    レディース
+                %li.toppage-main__category__menu__list
+                    メンズ
+                %li.toppage-main__category__menu__list
+                    家電・スマホ・カメラ
+                %li.toppage-main__category__menu__list
+                    おもちゃ・ホビー・グッズ
+        .toppage-main__container
+            = render "products/ladies"
+            = render "products/mens"
+    = render "shared/footer"

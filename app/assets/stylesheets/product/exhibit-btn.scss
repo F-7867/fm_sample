@@ -1,0 +1,24 @@
+.toppage-exhibit-btn {
+    &__box {
+        z-index: 2;
+        background-color: #ea352d;;
+        border-radius: 50%;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        width: 160px;
+        height: 160px;
+        padding-top: 30px;
+        text-align: center;
+        &--text {
+            font-size: 22px;
+            color: #fff;
+        }
+        &--icon {
+            color: #fff;
+            .icon {
+                font-size: 60px;
+            }
+        }
+    }
+}

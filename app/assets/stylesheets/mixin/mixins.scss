@@ -1,0 +1,64 @@
+@mixin aTagSet1($display: block, $fontSize:14px, $fontWeight:600, $lineHeight:36px) {
+	display: $display;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}
+@mixin aTagSet2($alignItem: center, $display:flex, $fontSize:14px, $height:32px, $textDecoration: none, $color: black) {
+    align-items: $alignItem;
+    display: $display;
+    font-size: $fontSize;
+    height: $height;
+    text-decoration: $textDecoration;
+    color: $color;
+}
+@mixin iconSet($color:rgb(204, 204, 204), $marginRight:10px) {
+    color: $color;
+    margin-right: $marginRight;
+}
+
+@mixin listBoxColorSet($color:rgb(255, 255, 255), $boxshadow: rgba(0, 0, 0, 0.18) 0px 2px 4px) {
+    background-color: $color;
+    box-shadow: $boxshadow;
+}
+
+@mixin sellform {
+    padding: 40px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+@mixin sessionform {
+    width: 100%;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+@mixin soldProduct {
+    .sold-out {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: 60px solid #ea352d ;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid transparent;
+        border-left: 60px solid #ea352d ;
+        z-index: 2;
+        &__text {
+            transform: rotate(-45deg);
+            font-size: 25px;
+            margin:-35px 0px 0px -60px;
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+    }
+}
